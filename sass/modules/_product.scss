@@ -1,0 +1,47 @@
+.product-add-btn-placeholder {padding-bottom: 52px;}
+.product-images-list {
+  height: 277px;overflow: hidden;border-bottom: 1px solid $bd-color;position: relative;
+  li {text-align: center;float: left;width: 100%;float: left;}
+  img {vertical-align: top;}
+  .owl-item {float: left;}
+}
+.social-links {position: absolute;width: 40px;top: 16px;left: 14px;z-index: 2;}
+.product-image-zoom {position: absolute; left: 14px; border: 0px none; bottom: 16px;z-index: 2;}
+
+$icons: sprite-map("sp-social/*.png", $layout: smart);
+$icons-2x: sprite-map("sp-social2x/*.png", $layout: smart);
+
+.social-icons {
+  display: block;width: 40px;height: 40px;margin-bottom: 8px;
+  &__vk {
+    @include use-sprite("vk-ico");
+  }
+  &__call {
+    @include use-sprite("call-ico");
+  }
+  &__fb {
+    @include use-sprite("fb-ico");
+  }
+}
+
+.product-descr {
+  padding-top: 8px;line-height: 16px;color: #565656;font-size: 14px;margin-bottom: 16px;padding-left: 14px;padding-right: 14px;position: relative;
+  strong {font-weight: 600;color: #000;}
+}
+.product-wishlist {
+  position: absolute;right: 0;top: 0;background: inline-image("svg/wishlist-ico.svg");background-size: 52px auto;width: 52px;height: 52px;
+  &__active {
+    background: inline-image("svg/wishlist-ico-active.svg");background-size: 52px auto;width: 52px;height: 52px;position: absolute;right: 0;top: 0;
+  }
+}
+.filter-switcher {
+  padding-left: 14px;padding-right: 14px;
+}
+.product-filter {margin-bottom: 8px;}
+.product-add-to-cart {position: fixed;bottom: 0;margin: 0 auto;left: 0;right: 0;max-width: 768px;padding: 4px;background: #fff;}
+.add-to-cart-btn {background: $bg-active;color: #fff;text-transform: uppercase;font-weight: 600;height: 48px;display: block;text-align: center;width: 100%;border: none;font-size: 16px;cursor: pointer;}
+
+.full-image {position: fixed;left: 0;right: 0;width: 100%;margin: 0 auto;top: 0;z-index: 10;text-align: center;background: #fff;height: 100%;}
+.full-image-close {position: fixed;left: 50%;width: 53px;height: 53px;background: inline-image("svg/close-ico.svg");bottom: 20px;margin-left: -26px;}
+
+.wishlist-overlay {display: none;}

@@ -1,0 +1,32 @@
+// =============================================
+// Compass Defaults
+// =============================================
+
+// Transition
+
+$default-transition-property: all;
+$default-transition-duration: 200ms;
+$default-transition-function: linear;
+$default-transition-delay: 0;
+
+// =============================================
+// Break Points
+// =============================================
+
+$bp-xsmall: 479px;
+$bp-small: 599px;
+
+$bg-active: #F5A623;
+$bg-disabled: #D8D8D8;
+$bd-green: #7ED321;
+$bd-red: #D0021B;
+$bd-color: #9B9B9B;
+
+// Sprites
+
+$img-sprite-dimensions: true;
+$img-layout: smart;
+$img-spacing: 5px;
+@import "sp/*.png";
+// @import "sp-social2x/*.png";
+// @import "sp-social/*.png";

@@ -1,0 +1,141 @@
+<header>
+  <div class="h-left"><a href ng-click="back()" class="back"><img src="images/svg/back-ico.svg" width="13" alt=""></a></div>
+  <div class="h-right">
+    <div class="header-cart"><a href="#"><img src="images/svg/cart-top.svg" width="26" alt=""></a></div>
+    <div class="header-wishlist"><a href="#"><img src="images/svg/wishlist-top.svg" width="22" alt=""></a></div>
+  </div>
+  <div class="h-center">Топы</div>
+</header>
+<div class="content">
+  <div class="filter">
+    <div class="total">35 позиций</div>
+    <a href="#" class="reset-filter-btn">Сброс</a>
+    <a href="#" class="filter-btn">Фильтр</a>
+  </div>
+  <ul class="items-list">
+    <li class="items-list__item">
+      <a href="#/category/item/1">
+        <span class="items-list-item__thumb"><img src="images/thumb-small.png" alt=""></span>
+        <span class="items-list-item__price">1 500 руб</span>
+        <span class="items-list-item__name">Cherokee 84754C</span>
+      </a>
+      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
+    </li>
+    <li class="items-list__item">
+      <a href="#">
+        <span class="items-list-item__thumb"><img src="images/thumb-small2.png" alt=""></span>
+        <span class="items-list-item__price">1 500 руб</span>
+        <span class="items-list-item__name">Iguana 1929</span>
+      </a>
+      <a href="#add-wishlist" class="items-list-item__wishlist wishlist-active"></a>
+    </li>
+    <li class="items-list__item">
+      <a href="#">
+        <span class="items-list-item__thumb"><img src="images/thumb-small3.png" alt=""></span>
+        <span class="items-list-item__price">1 500 руб</span>
+        <span class="items-list-item__name">Iguana 1929</span>
+      </a>
+      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
+    </li>
+    <li class="items-list__item">
+      <a href="#">
+        <span class="items-list-item__thumb"><img src="images/thumb-small4.png" alt=""></span>
+        <span class="items-list-item__price">1 500 руб</span>
+        <span class="items-list-item__name">Iguana 1929</span>
+      </a>
+      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
+    </li>
+    <li class="items-list__item">
+      <a href="#">
+        <span class="items-list-item__thumb"><img src="images/thumb-small5.png" alt=""></span>
+        <span class="items-list-item__price">1 500 руб</span>
+        <span class="items-list-item__name">Iguana 1929</span>
+      </a>
+      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
+    </li>
+    <li class="items-list__item">
+      <a href="#">
+        <span class="items-list-item__thumb"><img src="images/thumb-small6.png" alt=""></span>
+        <span class="items-list-item__price">1 500 руб</span>
+        <span class="items-list-item__name">Iguana 1929</span>
+      </a>
+      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
+    </li>
+  </ul>
+</div>
+<section class="filter-popup">
+  <header>
+    <div class="h-left"><a href="#" class="filter-cancel">Отменить</a></div>
+    <div class="h-right"><a href="#" class="filter-apply">Применить</a></div>
+    <div class="h-center">Фильтр</div>
+  </header>  
+  <div class="filter-options">
+    <div class="filter-orderby filter-switcher">
+      <label>
+        <span>Низкая цена</span>
+        <input type="radio" name="orderby">
+      </label>
+      <label>
+        <span>Все товары</span>
+        <input type="radio" checked="checked" name="orderby">
+      </label>
+      <label>
+        <span>Высокая цена</span>
+        <input type="radio" name="orderby">
+      </label>
+    </div>
+    <div class="filter-gender filter-switcher">
+      <div class="filter-gender__wrapper">
+        <label class="filter-gender__item">
+          <span>Мужское</span>
+          <input type="checkbox">
+        </label>
+        <label class="filter-gender__item">
+          <span>Женское</span>
+          <input type="checkbox">
+        </label>
+        <label class="filter-gender__item">
+          <span>Унисекс</span>
+          <input type="checkbox">
+        </label>
+      </div>
+    </div>
+    <div class="filter-size filter-switcher">
+      <div class="filter-title">Размер одежды: <span class="size-swithcer"><a href="#">RUS</a> | <a href="#" class="active">US</a></span></div>
+      <ul class="filter-size-list">
+        <li><label class="filter-size-list__item"><span>S</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>M</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>L</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>XL</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>2XL</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>3XL</span> <input type="checkbox"></label></li>
+      </ul>
+    </div>
+    <div class="filter-size filter-switcher">
+      <div class="filter-title">Размер обуви</div>
+      <ul class="filter-size-list">
+        <li><label class="filter-size-list__item"><span>36</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>37</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>38</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>39</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>40</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>41</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>42</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>43</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>44</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>45</span> <input type="checkbox"></label></li>
+        <li><label class="filter-size-list__item"><span>46</span> <input type="checkbox"></label></li>
+      </ul>
+    </div>
+    <div class="filter-brands filter-switcher">
+      <div class="filter-title">Бренды</div>
+      <ul class="filter-brands-list">
+        <li><label class="filter-brands-list__item"><span>Cherokee</span><input type="checkbox"></label></li>
+        <li><label class="filter-brands-list__item"><span>Dickies</span><input type="checkbox"></label></li>
+        <li><label class="filter-brands-list__item"><span>Runway</span><input type="checkbox"></label></li>
+        <li><label class="filter-brands-list__item"><span>Heartsoul</span><input type="checkbox"></label></li>
+        <li><label class="filter-brands-list__item"><span>Infinity</span><input type="checkbox"></label></li>
+      </ul>
+    </div>
+  </div>  
+</section>

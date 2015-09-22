@@ -1,0 +1,21 @@
+.homepage {background: #f5a623;height: 100%;}
+body > div {height: 100%;}
+.main-categ {
+  overflow: hidden;padding: 50px 0 0 0;list-style: none;display: block;max-width: 768px;margin: 0 auto;
+  a {text-decoration: none;}
+}
+.main-categ__item {width: 50%;text-align: center;margin-bottom: 40px;display: inline-block;vertical-align: top;font-size: 13px;}
+.main-categ-item__thumb {display: block;margin-bottom: 8px;}
+.main-cate-item__title {display: block;text-transform: uppercase;color: #fff;font-weight: 400;margin-bottom: 3px;}
+.main-cate-item__count {display: block;font-weight: 300;color: #1D1201;}
+
+.main-categ-item__accessories {
+  .main-categ-item__thumb {
+    padding-top: 32px;
+  }
+}
+
+.text-align {text-align: center;}
+.btn {
+  display: inline-block;padding: 0 15px;height: 42px;border: 4px solid #fff;color: #fff;text-decoration: none;text-align: center;line-height: 34px;text-transform: uppercase;
+}

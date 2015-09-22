@@ -1,0 +1,81 @@
+.cart-table {
+  width: 100%;margin-top: 10px;margin-bottom: 16px;
+  tr {
+    td {padding-bottom: 16px;}
+  }
+}
+.cart-product-thumb {width: 80px;text-align: center;vertical-align: top;}
+.cart-product-descr {
+  div {color: #444;font-size: 14px;line-height: 16px;}
+  .qty-wrapper {
+    padding-top: 8px;
+    .qty-minus, .qty-plus {display: inline-block;width: 32px;height: 32px;border: 1px solid #000;text-align: center;line-height: 26px;font-size: 32px;text-decoration: none;vertical-align: top;color: #000;}
+    .qty {width: 50px;border: none;font-size: 32px;height: 32px;text-align: center;}
+  }
+}
+
+.cart-btn {display: inline-block;font-size: 16px;font-weight: 600;min-width: 236px;padding: 0 10px;border: 2px solid #000;height: 48px;line-height: 46px;text-decoration: none;color: #000;text-align: center;text-transform: uppercase;}
+
+.order-form {
+  padding-top: 16px;background: #F8F8F8;padding-bottom: 22px;box-shadow: 0 1px 5px rgba(#000, 0.5);
+  .input-box {
+    position: relative;width: 236px;margin: 0 auto 10px;
+    &.textarea-box {width: 288px;}
+    ::-webkit-input-placeholder {
+       color: $bd-color;font-weight: 400;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+       color: $bd-color;  font-weight: 400;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+       color: $bd-color;font-weight: 400;  
+    }
+
+    :-ms-input-placeholder {  
+       color: $bd-color;font-weight: 400;  
+    }
+    input, select, textarea {
+      width: 100%;border-radius: 3px;border: 1px solid #000;height: 40px;font-size: 16px;padding: 0 10px;font-weight: 600;font-family: 'Helvetica Neue', 'HelveticaNeueCyr', Arial;
+      &:focus {
+        border-color: $bd-green;
+      }
+    }
+    textarea {height: 104px;resize: none;padding: 6px 10px;}
+    label {display: none;color: $bd-color;font-size: 8px;text-transform: uppercase;background: #fff;position: absolute;left: 9px;top: -3px;letter-spacing: 0.075em;padding: 0 5px;}
+    &.not-empty {
+      label {display: block;}
+    }
+  }
+  .next-step {padding-top: 24px;text-align: center;}
+}
+
+.customer-data {
+  padding-top: 16px;
+  table {width: 210px;margin: 0 auto;font-weight: 300;font-size: 13px;line-height: 15px;}
+  .td-right {text-align: right;padding-right: 16px;}
+  .td-left {text-align: left;font-weight: 400;}
+}
+
+.shipping-methods, .payment-methods {
+  width: 236px;margin: 0 auto;
+  li {margin-bottom: 16px;}
+  label {
+    position: relative;padding-left: 30px;display: inline-block;
+    strong {font-weight: 400;font-size: 15px;display: block}
+    span {font-weight: 300;font-size: 13px;}
+    input {position: absolute;opacity: 0;top: 0;left: 0;margin-left: 0;}
+    &:after, &:before {
+      content: "";position: absolute;left: 0;top: 0;
+    }
+    &:after {
+      border-radius: 50%;border: 1px solid #000;width: 14px;height: 14px;
+    }
+    &.checked {
+      &:before {
+        border-radius: 50%;background: $bg-active;z-index: 2;width: 10px;height: 10px;margin-left: 2px;top: 2px;
+      }
+    }
+  }
+}

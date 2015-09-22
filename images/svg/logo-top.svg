@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="76px" height="15px" viewBox="0 0 76 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>4doctors</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="HOME" sketch:type="MSArtboardGroup" transform="translate(-122.000000, -13.000000)" font-size="18" font-family="Arial" font-weight="bold">
+            <text id="4doctors" sketch:type="MSTextLayer">
+                <tspan x="122" y="27" fill="#FFFFFF">4do</tspan>
+                <tspan x="154.004" y="27" fill="#F6A623">c</tspan>
+                <tspan x="164.336" y="27" fill="#FFFFFF">t</tspan>
+                <tspan x="170.672" y="27" fill="#F6A623">o</tspan>
+                <tspan x="181.67" y="27" fill="#FFFFFF">rs</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

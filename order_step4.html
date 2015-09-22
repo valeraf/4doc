@@ -1,0 +1,64 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <meta charset="UTF-8">
+  <title>4doctors</title>
+  <link rel="stylesheet" href="css/app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="h-left"><a href="#" class="back"><img src="images/svg/back-ico.svg" width="13" alt=""></a></div>
+    <div class="h-center">Метод доставки</div>
+  </header>
+  <div class="content">
+      <div class="order-form">
+        <ul class="shipping-methods">
+          <li>
+            <label>
+              <input type="radio" name="shipping">
+              <strong>Самовывоз — 0 руб.</strong>
+              <span>Москва, метро Кропоткинская, Болотная набережная 7/3 шоурум 4doctors</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="shipping">
+              <strong>Курьером — 300 руб.</strong>
+              <span>по Москве в рабочие дни  с 10:00 до 18:00</span>
+            </label>
+          </li>
+        </ul>
+        <div class="next-step">
+          <a href="#" class="cart-btn">ПРОДОЛЖИТЬ</a>
+        </div>
+      </div>
+      <div class="customer-data">
+        <table>
+          <tr>
+            <td class="td-right">Город:</td>
+            <td class="td-left">Москва</td>
+          </tr>
+          <tr>
+            <td class="td-right">Страна:</td>
+            <td class="td-left">Россия</td>
+          </tr>
+          <tr>
+            <td class="td-right">Покупатель:</td>
+            <td class="td-left">Иван Петрович</td>
+          </tr>
+          <tr>
+            <td class="td-right">Эл. Почта:</td>
+            <td class="td-left">ivan@mail.ru</td>
+          </tr>
+          <tr>
+            <td class="td-right">Моб. телефон:</td>
+            <td class="td-left">8 (985) 322-90-89</td>
+          </tr>
+        </table>
+      </div>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
