@@ -1,0 +1,42 @@
+<header>
+  <div class="h-left"><a href ng-click="back()" class="back"><img src="images/svg/back-ico.svg" width="13" alt=""></a></div>
+  <div class="h-center">Покупатель</div>
+</header>
+<div class="headerplaceholder"></div>
+<div class="content">
+  <div class="order-form">
+    <form name="orderForm" novalidate role="form">
+      <div class="input-box textarea-box">
+        <label>Адрес</label>
+        <textarea ng-model="address" placeholder="Улица, дом, кв, комментарии"></textarea>
+      </div>
+      <div class="next-step">
+        <a href ng-click="submit(orderForm, $event)" class="cart-btn" data-next="4">ПРОДОЛЖИТЬ</a>
+      </div>
+    </form>
+  </div>
+  <div class="customer-data" ng-if="customer">
+    <table>
+      <tr>
+        <td class="td-right">Город:</td>
+        <td class="td-left">{{customer.city}}</td>
+      </tr>
+      <tr>
+        <td class="td-right">Страна:</td>
+        <td class="td-left">{{customer.country}}</td>
+      </tr>
+      <tr>
+        <td class="td-right">Покупатель:</td>
+        <td class="td-left">{{customer.name}}</td>
+      </tr>
+      <tr>
+        <td class="td-right">Эл. Почта:</td>
+        <td class="td-left">{{customer.email}}</td>
+      </tr>
+      <tr>
+        <td class="td-right">Моб. телефон:</td>
+        <td class="td-left">{{customer.tel}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

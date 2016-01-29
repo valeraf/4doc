@@ -1,0 +1,115 @@
+[
+    {
+        "order": 0, 
+        "id": "84754C", 
+        "imageUrl": "images/items/thumb-small.png", 
+        "name": "Cherokee", 
+        "price": 1500,
+        "gender":"female",
+        "size" : [
+          "S","M","L","XL","2XL","3XL"
+        ],
+        "color" : [
+          "green", "red","yellow"
+        ],
+        "brand" : [
+          "Cherokee", "Dickies","Runway", "Heartsoul","Infinity"
+        ]
+    }, 
+    {
+        "order": 1, 
+        "id": "1929", 
+        "imageUrl": "images/items/thumb-small2.png", 
+        "name": "Iguana", 
+        "price": 2100,
+        "gender":"female",
+        "options" : {
+          "size" : [
+            "S","M","L","XL"
+          ],
+          "color" : [
+            "green"
+          ],
+          "brand" : [
+            "Cherokee", "Heartsoul","Infinity"
+          ]
+        }
+    }, 
+    {
+        "order": 2, 
+        "id": "C7879A", 
+        "imageUrl": "images/items/thumb-small3.png", 
+        "name": "Iguana", 
+        "price": 1100,
+        "inWishlist" : true,
+        "gender":"female",
+        "options" : {
+          "size" : [
+            "2XL","3XL"
+          ],
+          "color" : [
+            "yellow"
+          ],
+          "brand" : [
+            "Infinity"
+          ]
+        }
+    }, 
+    {
+        "order": 3, 
+        "id": "19CC9", 
+        "imageUrl": "images/items/thumb-small4.png", 
+        "name": "Iguana", 
+        "price": 1100,
+        "gender":"male",
+        "options" : {
+          "size" : [
+            "S","M","L","XL","2XL","3XL"
+          ],
+          "color" : [
+            "green", "red","yellow"
+          ],
+          "brand" : [
+            "Cherokee", "Dickies","Runway", "Heartsoul","Infinity"
+          ]
+        }
+    }, 
+    {
+        "order": 4, 
+        "id": "12CC9", 
+        "imageUrl": "images/items/thumb-small5.png", 
+        "name": "Iguana", 
+        "price": 1300,
+        "gender":"female",
+        "options" : {
+          "size" : [
+            "L","XL","2XL"
+          ],
+          "color" : [
+            "red","yellow"
+          ],
+          "brand" : [
+            "Dickies","Runway","Infinity"
+          ]
+        }
+    }, 
+    {
+        "order": 4, 
+        "id": "12CC90", 
+        "imageUrl": "images/items/thumb-small6.png", 
+        "name": "Cherokee", 
+        "price": 1699,
+        "gender":"unisex",
+        "options" : {
+          "size" : [
+            "S","M","L","XL","2XL"
+          ],
+          "color" : [
+            "green", "red"
+          ],
+          "brand" : [
+            "Cherokee", "Dickies","Runway", "Heartsoul"
+          ]
+        }
+    } 
+]

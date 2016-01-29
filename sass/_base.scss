@@ -2,7 +2,7 @@
 html, body {height: 100%;}
 body {font-family: 'Helvetica Neue', 'HelveticaNeueCyr', Arial;padding: 0;margin: 0}
 header {
-  background: #000;height: 40px;position: relative;
+  background: #000;height: 40px;position: fixed;left: 0;right: 0;top: 0;z-index: 3;
   a {
     position: relative;z-index: 1;line-height: 1;
     img {vertical-align: top;}
@@ -27,7 +27,10 @@ header {
   .h-right {float: right;padding-right: 16px;line-height: 1;}
   .h-center {position: absolute;left: 0;right: 0;text-align: center;line-height: 40px;font-size: 16px;color: #fff;}
   .back, .top-menu {display: inline-block;vertical-align: top;padding-top: 10px;}
+  .back {padding-right: 10px;}
+  &.hide {opacity: 0;visibility: hidden;}
 }
+.headerplaceholder {height: 40px;}
 
 .content {max-width: 768px;margin: 0 auto;}
 .align-center {text-align: center;}
@@ -37,7 +40,7 @@ header {
 }
 .added-wishlist {
   text-align: center;width: 123px;height: 123px;border-radius: 8px;background: #fff;margin: auto;position: absolute;left: 0;right: 0;top: 0;bottom: 0;
-  &:after {
+  &:before {
     content: "";width: 71px;height: 61px;background: inline-image("svg/heart-big-checked.svg");display: inline-block;margin-top: 16px;margin-bottom: 8px;
   }
 }
@@ -46,4 +49,29 @@ header {
   &:before {
     content: "";width: 71px;height: 61px;display: block;margin: 16px auto 8px;background: inline-image("svg/heart-big-remove.svg");
   }
+}
+
+.added-to-cart {
+  text-align: center;width: 123px;height: 123px;border-radius: 8px;background: #fff;margin: auto;position: absolute;left: 0;right: 0;top: 0;bottom: 0;color: #000;font-size: 14px;font-weight: 600;
+  &:before {
+    content: "";width: 71px;height: 61px;display: block;margin: 16px auto 8px;background: inline-image("svg/cart-added.svg");background-repeat: no-repeat;background-size: 70px auto;
+  }
+}
+body {
+  
+  &.show-menu {
+    @include transition(transform 500ms ease 0s);@include transform(translateX(0));
+    &.show-menu-enabled {
+      @include transform(translateX(250px));
+      .mobile-menu-overlay {display: block;}
+    }
+  }
+}
+.mobile-menu {
+  position: absolute;left: 0;top: 0;@include transform(translateX(-100%));width: 250px;background: #000;bottom: 0;z-index: 3;
+  li {padding: 10px 0;display: block;border-top: 1px solid #222222}
+  a {display: block;color: #fff;text-decoration: none;text-transform: uppercase;font-size: 13px;padding: 10px 20px;}
+}
+.mobile-menu-overlay {
+  background: #000;opacity: 0.3;position: absolute;left: 0;top: 0;right: 0;bottom: 0;z-index: 2;display: none;
 }

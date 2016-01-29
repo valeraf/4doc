@@ -3,19 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>4doctors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="css/owl.carousel.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="js/angular-assets/app.js"></script>
-  <script src="js/angular-assets/controllers.js"></script>
-
-  <script src="js/scripts.js"></script>
+  <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+  <script src="js/angular-assets/app.js?1234567892"></script>
+  <script src="js/angular-assets/services.js?1234567892"></script>
+  <script src="js/angular-assets/controllers.js?1234567892"></script>
+  <script src="js/angular-assets/directives.js?1234567892"></script>
+  
+  <script src="js/vendor/owl.carousel.min.js"></script>
+  <script src="js/scripts.js?1234567892"></script>
 </head>
 <body ng-controller="4doctrsMainCtrl">
-  <div ng-view ng-class="slide"></div>
+  <div ng-view class="{{slide}}"></div>
 </body>
 </html>

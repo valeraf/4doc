@@ -26,15 +26,15 @@
       });
     });
   });
-  $('.filter-switcher, .shipping-methods, .payment-methods').each(function(i,e){
-    $(e).find('input').parent().removeClass('checked')
-    $(e).find('input:checked').parent().addClass('checked');
-    $(e).find('input:disabled').parent().addClass('disabled');
-    $('input', e).change(function(){
-      $(e).find('input').parent().removeClass('checked')
-      $(e).find('input:checked').parent().addClass('checked');
-    });
-  });
+  // $('.filter-switcher, .shipping-methods, .payment-methods').each(function(i,e){
+  //   $(e).find('input').parent().removeClass('checked')
+  //   $(e).find('input:checked').parent().addClass('checked');
+  //   $(e).find('input:disabled').parent().addClass('disabled');
+  //   $('input', e).change(function(){
+  //     $(e).find('input').parent().removeClass('checked')
+  //     $(e).find('input:checked').parent().addClass('checked');
+  //   });
+  // });
 
   $('.product-image-zoom').click(function(e){
     e.preventDefault();
@@ -104,18 +104,20 @@
 
   $('.qty-minus').click(function(e){
     e.preventDefault();
-    var qty = parseInt($('.qty').val());
+    var $qty = $(this).siblings('.qty');
+    var qty = parseInt($qty.val());
     qty--;
     if (qty <= 0) {
       qty = 0;
     }
-    $('.qty').val(qty);
+    $qty.val(qty);
   });
   $('.qty-plus').click(function(e){
     e.preventDefault();
-    var qty = parseInt($('.qty').val());
+    var $qty = $(this).siblings('.qty');
+    var qty = parseInt($qty.val());
     qty++;
-    $('.qty').val(qty);
+    $qty.val(qty);
   });
 
   var owl = $(".product-images-list ul");

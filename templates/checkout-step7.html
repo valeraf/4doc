@@ -1,0 +1,32 @@
+<header>
+  <div class="h-left"><a href ng-click="back()" class="back"><img src="images/svg/back-ico.svg" width="13" alt=""></a></div>
+  <div class="h-center">Оплата картой</div>
+</header>
+<div class="headerplaceholder"></div>
+<div class="content">
+  <form name="orderForm" novalidate role="form">
+    <div class="order-form">
+      <div class="input-box">
+        <input type="text" ng-model="cardnumber" autocomplete="off" required placeholder="Номер карты">
+      </div>
+      <div class="input-box card-label">
+        <div class="card-valid-date">
+          <label>Срок годности</label>
+          <input type="text" ng-model="month" placeholder="ММ">
+          <input type="text" ng-model="year" placeholder="ГГ">
+        </div>
+        <div class="card-cvv">
+          <label>CVV/CVC</label>
+          <input type="text"  ng-model="cvv">
+        </div>
+      </div>
+      <div class="input-box card-label">
+        <label>Как на карте</label>
+        <input type="text" ng-model="cardholder" required placeholder="Держатель карты">
+      </div>
+      <div class="next-step">
+        <a href ng-click="go('success')" class="cart-btn"> ОПЛАТИТЬ 6 000 руб</a>
+      </div>
+    </div>
+  </form>
+</div>

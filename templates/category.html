@@ -1,67 +1,33 @@
 <header>
   <div class="h-left"><a href ng-click="back()" class="back"><img src="images/svg/back-ico.svg" width="13" alt=""></a></div>
   <div class="h-right">
-    <div class="header-cart"><a href="#"><img src="images/svg/cart-top.svg" width="26" alt=""></a></div>
-    <div class="header-wishlist"><a href="#"><img src="images/svg/wishlist-top.svg" width="22" alt=""></a></div>
+    <div class="header-cart"><a ng-click="go('/cart')" href><img src="images/svg/cart-top.svg" width="26" alt=""></a></div>
+    
+    <update-wish-list-status></update-wish-list-status>
   </div>
   <div class="h-center">Топы</div>
 </header>
+<div class="headerplaceholder"></div>
 <div class="content">
   <div class="filter">
-    <div class="total">35 позиций</div>
-    <a href="#" class="reset-filter-btn">Сброс</a>
-    <a href="#" class="filter-btn">Фильтр</a>
+    <div class="total">{{filtered.length}} <span ng-show="filtered.length < items.length">из {{items.length}}</span> позиций</div>
+    <category-filter></category-filter>
   </div>
+  <div class="filterplaceholder"></div>
+  
   <ul class="items-list">
-    <li class="items-list__item">
-      <a href="#/category/item/1">
-        <span class="items-list-item__thumb"><img src="images/thumb-small.png" alt=""></span>
-        <span class="items-list-item__price">1 500 руб</span>
-        <span class="items-list-item__name">Cherokee 84754C</span>
+    <li ng-repeat="item in filtered=(items | filter:filterByProperties | filter:filterProductsBySize) | orderBy:price:reverse" class="items-list__item">
+      <a ng-click="go('/category/item/' + item.url)" href>
+        <span class="items-list-item__thumb"><img ng-src="{{item.imageUrl}}" alt=""></span>
+        <span class="items-list-item__price">{{item.price}} руб</span>
+        <span class="items-list-item__name">{{item.name}} {{item.id}}</span>
       </a>
-      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
-    </li>
-    <li class="items-list__item">
-      <a href="#">
-        <span class="items-list-item__thumb"><img src="images/thumb-small2.png" alt=""></span>
-        <span class="items-list-item__price">1 500 руб</span>
-        <span class="items-list-item__name">Iguana 1929</span>
-      </a>
-      <a href="#add-wishlist" class="items-list-item__wishlist wishlist-active"></a>
-    </li>
-    <li class="items-list__item">
-      <a href="#">
-        <span class="items-list-item__thumb"><img src="images/thumb-small3.png" alt=""></span>
-        <span class="items-list-item__price">1 500 руб</span>
-        <span class="items-list-item__name">Iguana 1929</span>
-      </a>
-      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
-    </li>
-    <li class="items-list__item">
-      <a href="#">
-        <span class="items-list-item__thumb"><img src="images/thumb-small4.png" alt=""></span>
-        <span class="items-list-item__price">1 500 руб</span>
-        <span class="items-list-item__name">Iguana 1929</span>
-      </a>
-      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
-    </li>
-    <li class="items-list__item">
-      <a href="#">
-        <span class="items-list-item__thumb"><img src="images/thumb-small5.png" alt=""></span>
-        <span class="items-list-item__price">1 500 руб</span>
-        <span class="items-list-item__name">Iguana 1929</span>
-      </a>
-      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
-    </li>
-    <li class="items-list__item">
-      <a href="#">
-        <span class="items-list-item__thumb"><img src="images/thumb-small6.png" alt=""></span>
-        <span class="items-list-item__price">1 500 руб</span>
-        <span class="items-list-item__name">Iguana 1929</span>
-      </a>
-      <a href="#add-wishlist" class="items-list-item__wishlist"></a>
+      <a href="#add-wishlist" class="items-list-item__wishlist" ng-click="item.inWishlist ? removeFromWishlist($event,item) : addToWishlist($event,item)" ng-class="item.inWishlist ? 'wishlist-active' : ''"></a>
     </li>
   </ul>
+  <div class="empty-message" ng-if="filtered.length == 0">
+    Нет таких товаров
+  </div>
 </div>
 <section class="filter-popup">
   <header>
@@ -71,44 +37,45 @@
   </header>  
   <div class="filter-options">
     <div class="filter-orderby filter-switcher">
-      <label>
+      <label ng-class="{checked: orderByPrice == 'low'}">
         <span>Низкая цена</span>
-        <input type="radio" name="orderby">
+        <input type="radio" name="orderby" value="low" ng-model="orderByPrice" ng-change="order('low')">
       </label>
-      <label>
+      <label ng-class="{checked: orderByPrice == 'reset'}">
         <span>Все товары</span>
-        <input type="radio" checked="checked" name="orderby">
+        <input type="radio" name="orderby" checked="checked" value="reset" ng-change="price = ''" ng-model="orderByPrice">
       </label>
-      <label>
+      <label ng-class="{checked: orderByPrice == 'high'}">
         <span>Высокая цена</span>
-        <input type="radio" name="orderby">
+        <input type="radio" name="orderby" value="high" ng-model="orderByPrice" ng-change="order('high')">
       </label>
     </div>
     <div class="filter-gender filter-switcher">
       <div class="filter-gender__wrapper">
-        <label class="filter-gender__item">
+        <label class="filter-gender__item" ng-class="{checked: filter['gender']['male']}">
           <span>Мужское</span>
-          <input type="checkbox">
+          <input type="checkbox" ng-model="filter['gender']['male']">
         </label>
-        <label class="filter-gender__item">
+        <label class="filter-gender__item" ng-class="{checked: filter['gender']['female']}">
           <span>Женское</span>
-          <input type="checkbox">
+          <input type="checkbox" ng-model="filter['gender']['female']">
         </label>
-        <label class="filter-gender__item">
+        <label class="filter-gender__item" ng-class="{checked: filter['gender']['unisex']}">
           <span>Унисекс</span>
-          <input type="checkbox">
+          <input type="checkbox" ng-model="filter['gender']['unisex']">
         </label>
       </div>
     </div>
     <div class="filter-size filter-switcher">
-      <div class="filter-title">Размер одежды: <span class="size-swithcer"><a href="#">RUS</a> | <a href="#" class="active">US</a></span></div>
+      <div class="filter-title">Размер одежды: <span class="size-swithcer"><a ng-click="lang='ru'" ng-class="{active : lang == 'ru'}" href>RUS</a> | <a ng-click="lang='en'" href ng-class="{active : lang == 'en'}">US</a></span></div>
       <ul class="filter-size-list">
-        <li><label class="filter-size-list__item"><span>S</span> <input type="checkbox"></label></li>
-        <li><label class="filter-size-list__item"><span>M</span> <input type="checkbox"></label></li>
-        <li><label class="filter-size-list__item"><span>L</span> <input type="checkbox"></label></li>
-        <li><label class="filter-size-list__item"><span>XL</span> <input type="checkbox"></label></li>
-        <li><label class="filter-size-list__item"><span>2XL</span> <input type="checkbox"></label></li>
-        <li><label class="filter-size-list__item"><span>3XL</span> <input type="checkbox"></label></li>
+        <li ng-repeat="size in options.size"><label class="filter-size-list__item" ng-class="{checked: gsize}"><span>{{getSize(size.toLowerCase(), lang) | uppercase}}</span> <input type="checkbox" name="filtersize" ng-model="gsize" ng-change="gsize ? selectSize(size) : unselectSize(size)"></label></li>
+      </ul>
+    </div>
+    <div class="filter-size filter-switcher">
+      <div class="filter-title">Цвет:</div>
+      <ul class="filter-color-list">
+        <li ng-repeat="color in options.color"><label class="filter-size-list__item" ng-class="{checked: Fcolor}"><span>{{color}}</span> <input type="checkbox" name="filtercolor" ng-model="Fcolor"></label></li>
       </ul>
     </div>
     <div class="filter-size filter-switcher">

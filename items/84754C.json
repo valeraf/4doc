@@ -1,0 +1,39 @@
+{ 
+    "id": "84754C", 
+    "imageUrl": ["images/items/thumb-big.png", "images/items/thumb-big2.png"],
+    "fullImageUrl"  : "images/items/thumb-full.png",
+    "name": "Cherokee", 
+    "price": 1500,
+    "sizes": [
+        {
+            "size":"S",
+            "inStock":true
+        },
+        {
+            "size":"M",
+            "inStock":false
+        },
+        {
+            "size":"L",
+            "inStock":true
+        }
+    ],
+    "colors": [
+        {
+            "code":"#7ED321",
+            "inStock":true,
+            "value":"green"
+        },
+        {
+            "code":"#4A90E2",
+            "inStock":false,
+            "value" : "blue"
+        },
+        {
+            "code":"#BD10E0",
+            "inStock":true,
+            "value":"violet"
+        }
+    ],
+    "brand":"Infinity by Cherokee"
+}

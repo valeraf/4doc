@@ -1,0 +1,79 @@
+<header>
+  <div class="h-left"><a href ng-click="back()" class="back"><img src="images/svg/back-ico.svg" width="13" alt=""></a></div>
+  <div class="h-center">Подтверждение заказа</div>
+</header>
+<div class="headerplaceholder"></div>
+<div class="content">
+    <div class="order-form">
+      <table class="cart-table">
+        <tr>
+          <td class="cart-product-thumb">
+            <img src="images/thumb-small.png" height="72" alt="">
+          </td>
+          <td class="cart-product-descr">
+            <div>Женский топ: 64743</div>
+            <div>Цвет: Белый</div>
+            <div>Размер: 42/44</div>
+            <div>1 500 руб x 1шт = 1 500 руб</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="cart-product-thumb">
+            <img src="images/thumb-small3.png" height="72" alt="">
+          </td>
+          <td class="cart-product-descr">
+            <div>Женский топ: 47634</div>
+            <div>Цвет: Фиолетовый</div>
+            <div>Размер: 42/44</div>
+            <div>2 100 руб x 2шт = 4 200 руб</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="order-form">
+      <table class="order-summary">
+        <tr>
+          <td class="summary-left">Доставка курьером:</td>
+          <td class="summary-right">= 300 руб </td>
+        </tr>
+        <tr class="grand-total">
+          <td class="summary-left" ng-if="customer.payment == 'cash'">Оплата наличными курьеру</td>
+          <td class="summary-left" ng-if="customer.payment == 'card'">Оплата банковской картой</td>
+          <td class="summary-left" ng-if="customer.payment == 'svyaznoi'">Оплата через Евросеть / Связной</td>
+          <td class="summary-left" ng-if="customer.payment == 'bank'">Оплата квитанцией Сбербанк</td>
+          <td class="summary-right">6 000 руб</td>
+        </tr>
+      </table>
+    </div>
+    <div class="customer-data">
+      <table>
+        <tr>
+          <td class="td-right">Город:</td>
+          <td class="td-left">Москва</td>
+        </tr>
+        <tr>
+          <td class="td-right">Страна:</td>
+          <td class="td-left">Россия</td>
+        </tr>
+        <tr>
+          <td class="td-right">Покупатель:</td>
+          <td class="td-left">Иван Петрович</td>
+        </tr>
+        <tr>
+          <td class="td-right">Эл. Почта:</td>
+          <td class="td-left">ivan@mail.ru</td>
+        </tr>
+        <tr>
+          <td class="td-right">Моб. телефон:</td>
+          <td class="td-left">8 (985) 322-90-89</td>
+        </tr>
+      </table>
+      <p>Доставка курьером от 2-х до 7-ми рабочих дней по адресу: <br> <strong>Россия, Москва ул. Крыжинапольского 14, кв 14, этаж 5, домофон 321 спросить Ивана</strong></p>
+    </div>
+    
+    <div class="product-add-btn-placeholder"></div>
+    <div class="product-add-to-cart">
+      <button ng-if="customer.payment != 'card'" href ng-click="go('success')" class="add-to-cart-btn add-to-cart-btn-green">Отправить заказ</button>
+      <button ng-if="customer.payment == 'card'" ng-click="go('checkout/step7')" class="add-to-cart-btn">Перейти к оплате</button>
+    </div>
+</div>

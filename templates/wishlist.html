@@ -1,0 +1,24 @@
+<header>
+  <div class="h-left"><a href ng-click="back()" class="back"><img src="images/svg/back-ico.svg" width="13" alt=""></a></div>
+  <div class="h-right">
+    <div class="header-cart"><a ng-click="go('/cart')" href><img src="images/svg/cart-top.svg" width="26" alt=""></a></div>    
+  </div>
+  <div class="h-center">Понравилось</div>
+</header>
+<div class="headerplaceholder"></div>
+<div class="content">  
+  <ul class="items-list">
+    <li ng-repeat="item in wishlistItems" class="items-list__item" ng-if="item.inWishlist">
+      <a ng-click="go('/category/item/' + item.url)" href>
+        <span class="items-list-item__thumb"><img ng-src="{{item.imageUrl}}" alt=""></span>
+        <span class="items-list-item__price">{{item.price}} руб</span>
+        <span class="items-list-item__name">{{item.name}} {{item.id}}</span>
+      </a>
+      <a href class="items-list-item__wishlist" ng-click="item.inWishlist ? removeFromWishlist($event,item) : addToWishlist($event,item)" ng-class="item.inWishlist ? 'wishlist-active' : ''"></a>
+    </li>
+  </ul>
+  <div class="empty-wishlist" ng-show="emptyWishlist">
+    Вы можете отметить любую товар из каталог в список понравившихся Для этого, воспользуйтесь иконкой рядом с товаром.
+  </div>
+  <a class="cart-btn" ng-click="go('/')" ng-show="emptyWishlist" href>Вернуться в каталог</a>
+</div>

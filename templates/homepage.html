@@ -1,18 +1,19 @@
 <div class="homepage">
   <header>
-    <div class="h-left"><a href="#" class="top-menu"><img src="images/svg/menu.svg" width="20" alt=""></a></div>
+    <div class="h-left"><a href ng-click="menu()" class="top-menu"><img src="images/svg/menu.svg" width="20" alt=""></a></div>
     <div class="h-right">
-      <div class="header-cart"><a href="#"><img src="images/svg/cart-top.svg" width="26" alt=""></a></div>
-      <div class="header-wishlist"><a href="#"><img src="images/svg/wishlist-top.svg" width="22" alt=""></a></div>
+      <div class="header-cart"><a ng-click="go('/cart')" href><img src="images/svg/cart-top.svg" width="26" alt=""></a></div>
+      <update-wish-list-status></update-wish-list-status>
     </div>
     <div class="h-center">
       <div class="logo"><img src="images/svg/logo-top.svg" width="101" alt="4doctors"></div>
     </div>
   </header>
+  <div class="headerplaceholder"></div>
   <div class="content">
     <ul class="main-categ">
       <li class="main-categ__item">
-        <a href ng-click="go('category/top')">
+        <a href ng-click="go('category/tops')">
           <div class="main-categ-item__thumb">
             <img src="images/svg/tshirt-ico.svg" width="123" alt="">
           </div>
@@ -20,7 +21,7 @@
           <span class="main-cate-item__count">567 позиций</span>
         </a>
       </li><li class="main-categ__item">
-        <a href="#">
+        <a href ng-click="go('category/pants')">
           <div class="main-categ-item__thumb">
             <img src="images/svg/pants.svg" width="86" alt="">
           </div>
@@ -28,7 +29,7 @@
           <span class="main-cate-item__count">120 позиций</span>
         </a>
       </li><li class="main-categ__item">
-        <a href="#">
+        <a href ng-click="go('category/tops')">
           <div class="main-categ-item__thumb">
             <img src="images/svg/bathrobe.svg" width="121" alt="">
           </div>
@@ -36,7 +37,7 @@
           <span class="main-cate-item__count">90 позиций</span>
         </a>
       </li><li class="main-categ__item main-categ-item__accessories">
-        <a href="#">
+        <a href ng-click="go('category/pants')">
           <div class="main-categ-item__thumb">
             <img src="images/svg/accessories.svg" width="75" alt="">
           </div>
@@ -44,7 +45,7 @@
           <span class="main-cate-item__count">20 позиций</span>
         </a>
       </li><li class="main-categ__item">
-        <a href="#">
+        <a href ng-click="go('category/tops')">
           <div class="main-categ-item__thumb">
             <img src="images/svg/hats.svg" width="85" alt="">
           </div>
@@ -52,7 +53,7 @@
           <span class="main-cate-item__count">90 позиций</span>
         </a>
       </li><li class="main-categ__item">
-        <a href="#">
+        <a href ng-click="go('category/pants')">
           <div class="main-categ-item__thumb">
             <img src="images/svg/shoes.svg" width="96" alt="">
           </div>
@@ -62,7 +63,38 @@
       </li>
     </ul>
     <div class="text-align">
-      <a href="#" class="btn btn-white">Скидки &amp; Акции</a>
+      <a href="" class="btn btn-white">Скидки &amp; Акции</a>
+    </div>
+  </div>
+  <div class="mobile-menu-overlay" ng-click="menu()"></div>
+  <div class="mobile-menu">
+    <ul>
+      <li><a href ng-click="go('category/tops')">Топы</a></li>
+      <li><a href ng-click="go('category/pants')">Брюки</a></li>
+      <li><a href ng-click="go('category/tops')">Халаты</a></li>
+      <li><a href ng-click="go('category/pants')">Аксессуары</a></li>
+      <li><a href ng-click="go('category/tops')">Шапочки</a></li>
+      <li><a href ng-click="go('category/pants')">Обувь</a></li>
+    </ul>
+  </div>
+  <div class="sales-wrapper">
+    <div class="sale-block">
+      <img src="images/sale.png" alt="">
+      <div class="subscribe-form">
+        <p>Подпишитесь на рассылку и будьте всегда в курсе новинок, скидок и акций.</p>
+        <div class="subscribe">
+          <input type="text" placeholder="Электронная почта">
+        </div>
+        <div class="subscribe-gender">
+          <label><input type="radio" name="gender"> Я женщина</label>
+          <label><input type="radio" name="gender"> Я мужчина</label>
+        </div>
+      </div>
+      <div class="success-message">
+        <h2>Спасибо!</h2>
+        <p>Будем держать вас вкурсе событий!</p>
+      </div>
+      <a href="" class="full-image-close"></a>
     </div>
   </div>
 </div>

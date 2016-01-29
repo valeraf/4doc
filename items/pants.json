@@ -1,0 +1,82 @@
+[
+    {
+        "order": 0, 
+        "url": "CELV", 
+        "id": "CELV-C", 
+        "imageUrl": "images/items/pants/1066_CELV_small.jpg", 
+        "name": "Cherokee", 
+        "price": 2800,
+        "gender":"female",
+        "description" : "Брюки медицинские женские с низкой посадкой <br> Прямые брюки с низкой посадкой. Имеют эластичный пояс со шнурком. Есть 2 передних косых кармана и 2 задних кармана. Под правым передним ",
+        "size" : [
+          "S","M","L","XL","2XL","3XL"
+        ],
+        "color" : [
+          "green", "red","yellow"
+        ],
+        "brand" : [
+          "Cherokee"
+        ]
+    }, 
+    {
+        "order": 1, 
+        "url": "CELV", 
+        "id": "CELV-V", 
+        "imageUrl": "images/items/pants/1066_KAKV_small.jpg", 
+        "name": "Iguana", 
+        "price": 2100,
+        "gender":"female",
+        "description" : "Брюки медицинские женские с низкой посадкой <br> Прямые брюки с низкой посадкой. Имеют эластичный пояс со шнурком. Есть 2 передних косых кармана и 2 задних кармана. Под правым передним ",
+        "options" : {
+          "size" : [
+            "S","M","L","XL"
+          ],
+          "color" : [
+            "green"
+          ],
+          "brand" : [
+            "Cherokee", "Heartsoul","Infinity"
+          ]
+        }
+    }, 
+    {
+        "order": 2, 
+        "url": "CELV", 
+        "id": "CELB", 
+        "imageUrl": "images/items/pants/4005T_NAVW_small.jpg", 
+        "name": "Iguana", 
+        "price": 1100,
+        "gender":"female",
+        "options" : {
+          "size" : [
+            "2XL","3XL"
+          ],
+          "color" : [
+            "yellow"
+          ],
+          "brand" : [
+            "Infinity"
+          ]
+        }
+    }, 
+    {
+        "order": 3, 
+        "url": "CELV", 
+        "id": "CELVN", 
+        "imageUrl": "images/items/pants/4044_WHTW_small.jpg", 
+        "name": "Iguana", 
+        "price": 1100,
+        "gender":"male",
+        "options" : {
+          "size" : [
+            "S","M","L","XL","2XL","3XL"
+          ],
+          "color" : [
+            "green", "red","yellow"
+          ],
+          "brand" : [
+            "Cherokee", "Dickies","Runway", "Heartsoul","Infinity"
+          ]
+        }
+    }
+]

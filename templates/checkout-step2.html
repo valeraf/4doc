@@ -1,0 +1,41 @@
+<header>
+  <div class="h-left"><a href ng-click="back()" class="back"><img src="images/svg/back-ico.svg" width="13" alt=""></a></div>
+  <div class="h-center">Покупатель</div>
+</header>
+<div class="headerplaceholder"></div>
+<div class="content">
+  <div class="order-form">
+    <form name="orderForm" novalidate role="form">
+      <div class="input-box" ng-class="{'not-empty': countryModel.name.length }">
+        <label>Страна</label>
+        <select ng-model="countryModel" required ng-options="country as country.name for country in countryList"><option value="">Страна</option></select>
+      </div>
+      <div class="input-box" ng-class="{'not-empty': cityModel.name.length }">
+        <label>Город</label>
+        <select ng-model="cityModel" required ng-options="city as city.name for city in cityList">
+          <option value="">Город</option>
+        </select>
+      </div>
+      <div class="next-step">
+        <a href ng-click="submit(orderForm, $event)" data-next="3" class="cart-btn">ПРОДОЛЖИТЬ</a>
+      </div>
+    </form>
+  </div>
+  
+  <div class="customer-data" ng-show="customer">
+    <table>
+      <tr>
+        <td class="td-right">Покупатель:</td>
+        <td class="td-left">{{customer.name}}</td>
+      </tr>
+      <tr>
+        <td class="td-right">Эл. Почта:</td>
+        <td class="td-left">{{customer.email}}</td>
+      </tr>
+      <tr>
+        <td class="td-right">Моб. телефон:</td>
+        <td class="td-left">{{customer.tel}}</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<header>
+  <div class="h-left"><a href ng-click="back()" class="back"><img src="images/svg/back-ico.svg" width="13" alt=""></a></div>
+  <div class="h-center">Покупатель</div>
+</header>
+<div class="headerplaceholder"></div>
+<div class="content">
+  <form name="orderForm" novalidate role="form">
+    <div class="order-form">
+      <div class="input-box" ng-class="{ error: orderForm.$error.email }" >
+        <label>Электронная почта</label>
+        <input type="email" ng-model="email" autocomplete="off" required ng-keyup="keyUp($event)" placeholder="Электронная почта">
+      </div>
+      <div class="input-box" ng-class="{error: orderForm.$error.tel, 'not-empty': tel.length }">
+        <label>Номер мобильного телефона</label>
+        <input type="tel" ng-model="tel" required placeholder="Номер мобильного телефона">
+      </div>
+      <div class="input-box" ng-class="{error: orderForm.$error.name, 'not-empty': name.length }">
+        <label>Имя и Фамилия</label>
+        <input type="text" ng-model="name" required placeholder="Имя и Фамилия">
+      </div>
+      <div class="next-step">
+        <a href ng-click="submit(orderForm,$event)" data-next="2" class="cart-btn">ПРОДОЛЖИТЬ</a>
+      </div>
+  </form>
+</div>

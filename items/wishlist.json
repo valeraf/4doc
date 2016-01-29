@@ -1,0 +1,84 @@
+[
+    {
+        "order": 0, 
+        "url": "84754C", 
+        "id": "84754C", 
+        "imageUrl": "images/items/thumb-small.png", 
+        "name": "Cherokee", 
+        "price": 1500,
+        "inWishlist" : true,
+        "gender":"female",
+        "size" : [
+          "S","M","L","XL","2XL","3XL"
+        ],
+        "color" : [
+          "green", "red","yellow"
+        ],
+        "brand" : [
+          "Cherokee", "Dickies","Runway", "Heartsoul","Infinity"
+        ]
+    }, 
+    {
+        "order": 1, 
+        "url": "84754C", 
+        "id": "1929", 
+        "imageUrl": "images/items/thumb-small2.png", 
+        "name": "Iguana", 
+        "price": 2100,
+        "inWishlist" : true,
+        "gender":"female",
+        "options" : {
+          "size" : [
+            "S","M","L","XL"
+          ],
+          "color" : [
+            "green"
+          ],
+          "brand" : [
+            "Cherokee", "Heartsoul","Infinity"
+          ]
+        }
+    }, 
+    {
+        "order": 2, 
+        "url": "84754C", 
+        "id": "C7879A", 
+        "imageUrl": "images/items/thumb-small3.png", 
+        "name": "Iguana", 
+        "price": 1100,
+        "inWishlist" : true,
+        "gender":"female",
+        "options" : {
+          "size" : [
+            "2XL","3XL"
+          ],
+          "color" : [
+            "yellow"
+          ],
+          "brand" : [
+            "Infinity"
+          ]
+        }
+    },
+    {
+        "order": 4, 
+        "url": "84754C", 
+        "id": "12CC9", 
+        "imageUrl": "images/items/thumb-small5.png", 
+        "name": "Iguana", 
+        "price": 1300,
+        "inWishlist" : true,
+        "gender":"female",
+        "options" : {
+          "size" : [
+            "L","XL","2XL"
+          ],
+          "color" : [
+            "red","yellow"
+          ],
+          "brand" : [
+            "Dickies","Runway","Infinity"
+          ]
+        }
+    }
+]
